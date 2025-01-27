@@ -16,3 +16,104 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 10px;
+  background: #007bff;
+  color: white;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  padding: 5px;
+  font-size: 16px;
+  width: 300px;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #003d7a;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+.gallery-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.info {
+  display: flex;
+  gap: 6px;
+  background-color: #fff;
+}
+
+.btn-load-more {
+  display: block;
+  align-items: center;
+}
+
+.btn-load-more:hover {
+  background-color: #003d7a;
+}
+
+.info {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px;
+  text-align: left;
+}
+
+.hidden {
+  display: none;
+}
+
+#loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
